@@ -1,0 +1,63 @@
+/* Paginas error UVa Nginx */
+
+a {
+	text-decoration: none;
+	color: #a1a1a1
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#centrado {
+	margin: auto;
+  	position: absolute;
+  	top: 0; left: 0; bottom: 0; right: 0;
+  	padding-top: 2px;
+  	padding-bottom: 2px;
+  	padding-left: 15px;
+  	padding-right: 15px;
+  	background-color: rgba(24,24,24,0.7);
+}
+
+#contenido {
+  	width: 650px;
+  	/*height: 105px;*/
+  	height: 190px;
+  	margin: auto;
+  	position: absolute;
+  	top: 0; left: 0; bottom: 0; right: 0;
+	
+}
+
+#contenido h1, #contenido h2 {
+	font-weight: 100;
+	color: white;
+	padding-bottom: 0;
+	margin-bottom: -10px;
+}
+
+#contenido h2 {
+	margin-bottom: -20px;
+}
+
+#contenido p {
+	font-weight: 100;
+	color: #d6d5d7;
+	margin-bottom: -10px;
+}
+
+#contenido #pie {
+	font-size: 11px;
+	width: 640px;
+	height: 20px;
+	background-color: #475c7e;
+	margin-top: 20px;
+	margin-left: -15px;
+	margin-right: -10px;
+	padding-top: 5px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: right;
+}

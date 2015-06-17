@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Lo sentimos... Universidad de Valladolid</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<link href="./css/estilos.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+<style>
+html {
+  	font-family: 'Roboto', sans-serif;
+  	font-weight: 400;
+}
+</style>
+<script>
+$(document).ready(function() {
+	eltiempo = Math.floor((Math.random()*(8000-4000))+4000);
+	window.setInterval(function(){
+			cambiafondo();
+		}, eltiempo);
+});
+
+function cambiafondo() {
+	num = Math.floor((Math.random()*7)+1);
+	$("html").css(
+			{
+			"background-image": "url(img/"+num+".gif)",
+			"-webkit-background-size": "cover",
+			"-moz-background-size": "cover",
+			"-o-background-size": "cover",
+			"background-size": "cover",
+			"background-repeat": "no-repeat",
+			"background-attachment": "fixed",
+			"background-position": "center center"
+			});
+}
+</script>
+</head>
+
+<body>
+<div id="contenido">
+	<div id="centrado">
+    	<img src="img/uva_red.png" style="float: right; margin-right: -15px;margin-top:-2px;" alt="Universidad de Valladolid" width="90"/>
+		<h1>Lo sentimos, tenemos un problema</h1>
+        <p>Al parecer existe algun problema con la web y estamos tratando de solucionarlo.</p>
+        <p>Te recomendamos que pruebes m&aacute;s tarde.</p>
+        <div id="pie">
+        	<a href="http://www.uva.es" title="Universidad de Valladolid"><img src="img/46_Home.png" alt="Volver a la principal" width="15"/></a>&nbsp;&nbsp;&nbsp;<a href="mailto:soporte-web@uva.es"><img src="img/05_Comment.png" alt="Contacta con nosotros"  width="15"/></a>
+    	</div>
+    </div>
+</div>
+</body>
+</html>
