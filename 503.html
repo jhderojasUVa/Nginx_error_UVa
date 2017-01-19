@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Error 503. La p&aacute;gina se esta generando</title>
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/estilos_503.css">
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script>
+  $(function () {
+    // Ponemos la de inicio aleatoria
+    cambia_imagen();
+    // Los tooltip
+    $('[data-toggle="tooltip"]').tooltip();
+    // El cambio de la imagen
+    window.setInterval(function(){
+      cambia_imagen();
+    },4000);
+    });
+
+    function cambia_imagen() {
+      // Primero un aleatorio
+      aleatorio = Math.floor((Math.random()*10)+1);
+      // Luego el cambio del CSS
+      $(".imagen").css({
+                       "background":"url('img/working_"+aleatorio+".gif') no-repeat center center",
+                       "background-size": "cover"
+                     });
+    }
+  </script>
+</head>
+<body>
+  <div class="centrado centrado-vertical">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-md-offset-4">
+          <div class="imagen img-responsive"></div>
+        </div>
+        <div class="col-md-5">
+          <h1>Error 503</h1>
+          <h5>La p&aacute;gina que ha pedido se esta generando</h5>
+          <p>Pruebe un poco m&aacute;s tarde.</p>
+          <form action="http://www.uva.es/opencms/buscador.html">
+            <input type="text" name="q" placeholder="Buscar...">
+            <input type="image" src="img/lupa_buscador" >
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="barra">
+    <ul>
+
+      <li><a href="http://www.uva.es" role="link" aria-label="Página principal de la Universidad de Valladolid" data-toggle="tooltip" data-placement="top" title="Ir a la principal"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+      <li><a href="https://miportal.uva.es" role="link" aria-label="MiPortal, Intranet de la Universidad de Valladolid" data-toggle="tooltip" data-placement="top" title="MiPortal"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
+      <li><a href="mailto:soporte@uva.es?subject=Problema en la web" role="link" aria-label="Contacta con soporte de la Universidad de Valladolid" data-toggle="tooltip" data-placement="top" title="Contacto"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></li>
+      <li><img src="img/logo_azul.jpg" alt="Universidad de Valladolid" width="50px" aria-label="Universidad de Valladolid"></li>
+    </ul>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+/* Estilos 404 */
+body, html {
+  background-color: #e5134b;
+  color: white;
+}
+
+#centrado {
+  width: 390px;
+  margin : 0 auto;
+  transform: translate(0%, 50%);
+}
+
+.barra {
+  /*margin-top: 20px;*/
+  position: fixed;
+  bottom: 15px;
+  right: 5px;
+}
+
+.barra ul, .barra li {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.barra li {
+  margin-right: 15px;
+}
+
+.barra a {
+  display: block;
+  margin-top: 10px;
+  color: white;
+  font-size: 24px;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 225px;
+  margin: 0;
+  padding: 0;
+  height: 280px;
+}
+
+h5 {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+/* form */
+
+form input[type="text"] {
+  width: 352px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  border: 1px solid #005d8c;
+  padding: 8px 10px;
+  /*margin: -4px;*/
+}
+
+form input[type="image"] {
+  background-color: #005d8c;
+  margin-left: -4px;
+  position: relative;
+  top: 13px;
+}
