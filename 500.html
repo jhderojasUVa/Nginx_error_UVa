@@ -4,25 +4,28 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Lo sentimos... Universidad de Valladolid</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<link href="css/estilos.css" rel="stylesheet" type="text/css" />
+<link href="./css/estilos.css" rel="stylesheet" type="text/css" />
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
 <style>
 html {
-	background: url(img/2.gif) no-repeat center center fixed; 
-  	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
   	font-family: 'Roboto', sans-serif;
   	font-weight: 400;
 }
 </style>
 <script>
 $(document).ready(function() {
+  cambiafondo();
+	eltiempo = Math.floor((Math.random()*(8000-4000))+4000);
+	window.setInterval(function(){
+			cambiafondo();
+		}, eltiempo);
+});
+
+function cambiafondo() {
 	num = Math.floor((Math.random()*7)+1);
 	$("html").css(
 			{
-			"background-image": "url(img/"+num+".gif)",
+			"background-image": "url(img/500/"+num+".gif)",
 			"-webkit-background-size": "cover",
 			"-moz-background-size": "cover",
 			"-o-background-size": "cover",
@@ -31,7 +34,7 @@ $(document).ready(function() {
 			"background-attachment": "fixed",
 			"background-position": "center center"
 			});
-});
+}
 </script>
 </head>
 
